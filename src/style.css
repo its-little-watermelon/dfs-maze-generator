@@ -1,0 +1,103 @@
+:root {
+	--primary: #ff8c32;
+	--secondary: #32a5ff;
+	--bg: #f0f0f0;
+	--currentCell: #ff8c32;
+	--neighbourCell: #32a6ff9e;
+	--visitedCell: #827397;
+	--revisitedCell: #4d4c7d;
+	--wall: #282828;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+}
+
+main {
+	min-height: calc(100vh - 6rem);
+	padding: 3rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+canvas {
+	height: 60vh;
+}
+
+.settings {
+	text-align: center;
+	display: block;
+}
+
+.settings div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding-top: 2rem;
+}
+
+.settings button {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#play-button {
+	background: var(--primary);
+}
+#play-button > img {
+	width: 60%;
+}
+#next-button {
+	background: var(--secondary);
+}
+#next-button > img {
+	width: 80%;
+}
+#next-button:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.settings div:nth-child(2) img {
+	width: 2rem;
+	/* filter: invert(12%) sepia(18%) saturate(12%) hue-rotate(314deg)
+		brightness(91%) contrast(88%); */ /* https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.additional-settings {
+	display: none;
+	gap: 1rem;
+	padding: 2rem 0;
+}
+.additional-settings button {
+	background: var(--primary);
+	border: none;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.4rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+@media (max-width: 850px) {
+	canvas {
+		width: 75vw;
+		height: auto;
+	}
+}
+@media (max-width: 600px) {
+	main {
+		justify-content: space-evenly;
+	}
+	canvas {
+		width: 90vw;
+	}
+}
