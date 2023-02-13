@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Maze</title>
+		<script type="module" crossorigin src="/assets/index-50c19f2f.js"></script>
+		<link rel="stylesheet" href="/assets/index-84a8bd02.css">
+	</head>
+	<body>
+		<main>
+			<canvas id="maze"></canvas>
+
+			<div class="settings" hidden>
+				<div>
+					<button id="play-button">
+						<img src="/triangle.svg" class="img" alt="Play Button" />
+					</button>
+					<button id="next-button">
+						<img src="/triangle2.svg" class="img" alt="Play Button" />
+					</button>
+				</div>
+				<div>
+					<img src="/slow.svg" alt="Slow Icon" />
+					<input type="range" id="speed-input" min="0" max="4" />
+					<img src="/fast.svg" alt="Fast Icon" />
+				</div>
+			</div>
+
+			<div class="additional-settings" hidden>
+				<button id="new-maze-button">New Maze</button>
+			</div>
+		</main>
+
+		
+	</body>
+</html>
